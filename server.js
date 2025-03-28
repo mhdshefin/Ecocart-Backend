@@ -16,7 +16,7 @@ connectDB()
 connectCloudinary()
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({ origin: "https://eco-cart-store.vercel.app" }))
 
 app.use('/api/product', ProductRouter)
 app.use('/api/user', userRoter)
